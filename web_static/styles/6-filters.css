@@ -29,6 +29,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    position: relative;
 }
 .locations{
     border-right: 1px solid #DDDDDD;
@@ -45,10 +46,34 @@
     margin-left: 50px;
     margin-top: 0;
 }
-ul {
+.popover ul {
     list-style: none;
-    
+    padding-left: 20px;
 }
-h2 {
+.popover h2 {
     font-size: 16px;
+}
+.popover li {
+    margin-bottom: 5px;
+}
+.popover {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 94.5%;
+    background-color: #FAFAFA;
+    border: 1px solid #DDDDDD;
+    border-radius: 4px;
+    list-style-type: none;
+    margin-top: 0%;
+    padding: 10px;
+    z-index: 1000;
+}
+.locations:hover .popover, .amenities:hover .popover {
+    display: block;
+    cursor: pointer;
+}
+.amenities:hover .popover{
+    width: 60%;
 }

@@ -1,0 +1,67 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-size: 14px;
+    font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    color: #484848;
+    box-sizing: border-box;
+}
+main {
+    flex: 1;
+}
+.container {
+    max-width: 1000px;
+    margin: 30px auto;
+}
+@media (max-width: 400px) {
+    .filters {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .filters > div {
+        flex: 1 1 100%;
+        margin-bottom: 10px;
+    }
+
+    .filters button {
+        width: 100%;
+        margin-top: 0;
+    }
+
+    .places article {
+        width: 100%;
+    }
+}
+
+@media (max-width: 800px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .filters {
+        flex: 1 1 100%;
+    }
+
+    .places {
+        flex: 1 1 100%;
+    }
+
+    .places article {
+        width: 100%;
+    }
+
+    .information {
+        flex-direction: column;
+    }
+
+    .price_by_night {
+        position: relative;
+        right: 0;
+        top: 0;
+        margin-bottom: 20px;
+    }
+}
